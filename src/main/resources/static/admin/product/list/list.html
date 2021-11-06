@@ -1,0 +1,24 @@
+<div class="container">
+    <div>
+        <button class="btn btn-outline-primary" >Создать</button>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in products">
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button class="btn btn-outline-primary" ng-click="editProduct(product.id)">Редактировать</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
