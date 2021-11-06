@@ -1,0 +1,46 @@
+<div class="container my-4">
+    <form novalidate ng-submit="saveProduct()" enctype="multipart/form-data" method="post">
+        <div class="form-row d-flex flex-sm-column justify-content-around">
+            <div class="col-md-5 col-sm-12">
+
+                <div class="form-group">
+                    <label class="form-label" for="productName">Имя продукта </label>
+                    <input ng-model="newProduct.title" class="form-control" id="productName"
+                           placeholder="Введите название продукта" size="30"
+                           type="text">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="categoryDto">Выберите категорию</label>
+                    <select class="form-control" id="categoryDto" multiple ng-model="product.category">
+                        <option ng-repeat="category in categories"
+                                value="{{category.id}}"
+                                ng-selected="product.category.id==category.id">
+                            {{category.id}}
+
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-12">
+                <div class="form-group">
+                    <label class="form-label" for="productCost">Стоимость продукта</label>
+                    <input ng-model="newProduct.price" class="form-control" id="productCost"
+                           placeholder="Введите стоимость продукта" step="0.01"
+                           type="number">
+                </div>
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label class="form-label" for="formFile">Выберите изображение</label>
+                        <input accept="image/*" class="form-control" id="formFile" name="image" type="file">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <button class="btn btn-outline-success" type="submit">Сохранить</button>
+        </div>
+    </form>
+</div>
+

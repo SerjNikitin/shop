@@ -1,0 +1,11 @@
+package com.geekbrains.shop.domain.constant;
+
+public class RestControllerName {
+
+    public static final String API_V1 = "/api/v1";
+    public static final String PRODUCT = "/product";
+    public static final String CATEGORY = "/category";
+    public static final String PRODUCT_REVIEW = "/reviews";
+
+
+}
